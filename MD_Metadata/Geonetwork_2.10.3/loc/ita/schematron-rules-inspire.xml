@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <!-- INSPIRE metadata rules translation / START -->
+    
+    <!-- List of pattern title -->
+    <identification>Identificazione</identification>
+    <dataIdentification>Identificazione del dato</dataIdentification>    
+    <serviceIdentification>Identificazione del servizio</serviceIdentification>
+    <theme>Parole chiave e classi INSPIRE</theme>
+    <serviceTaxonomy>Tassonomia dei servizi INSPIRE</serviceTaxonomy>
+    <geo>Località geografica</geo>
+    <temporal>Riferimento temporale</temporal>
+    <quality>Qualità e validazione</quality>
+    <conformity>Conformità</conformity>
+    <constraints>Restrizioni d'accesso e uso</constraints>
+    <org>Ente responsabile</org>
+    <metadata>Metadati sui metadati</metadata>
+    
+    
+    <alert.M35><div><h2>Titolo della risorsa mancante.</h2></div></alert.M35>
+    <report.M35><div><h2>Titolo della risorsa trovato:</h2></div></report.M35>
+    <alert.M36><div><h2>Sunto della risorsa mancante.</h2>
+        <br/>
+        <b>Esempio:</b><br/>
+        Il dataset contiene topografia a larga scala (1:1.000), che copre l'intero Paese.
+    </div></alert.M36>
+    <report.M36><div><h2>Il sunto della risorsa è :</h2></div></report.M36>
+    <alert.M37><div><h2>Tipo della risorsa mancante o errato.</h2>
+        <br/>
+        <b>Istruzioni di implementazione:</b><br/>
+        I valori di MD_ScopeCode nell'ambito della 
+        direttiva (Vedi SC4 in 1.2) sono:
+        <ul>
+            <li>dataset per dataset spaziali;</li>
+            <li>serie per serie spaziali;</li>
+            <li>servizi per servizi di dati spaziali.</li>
+        </ul> 
+	La proprietà <i>hierarchyLevel</i> non è obbligatoria secondo l'ISO
+        19115, ma è obbligatorio per la conformità alle regole di implementazione INSPIRE
+        (Vedi SC2 in 1.2).        
+    </div></alert.M37>
+    <report.M37><div><h2>Il tipo di risorsa è: </h2></div></report.M37>
+    <alert.M38><div><h2>Identificatore univoco della risorsa mancante</h2>
+        <br/>
+        <b>Istruzioni di implementazione:</b><br/>
+        Obbligatorio per dataset e serie.<br/>
+        <b>Esempio:</b> 527c4cab-070c-4bca-9aaf-92bece7be902
+    </div></alert.M38>
+    <report.M38><div>L'identificatore univoco della risorsa è:</div></report.M38>
+    <report.M38.codespace><div>Il codespace dell''identificatore univoco della risorsa:</div></report.M38.codespace>
+    <alert.M39><div><h2>La categoria d'argomento INSPIRE - ISO è obbligatoria</h2><br/>
+        La categoria d'argomento definita nella Parte D 2 delle regole di implementazione 
+        dei metadati INSPIRE derivano direttamente dalle
+        categorie d'argomento definite nel paragrafo B.5.27 dell'ISO 19115.
+        Le regole di implementazione dei metadati INSPIRE definiscono 
+        i temi di dati INSPIRE ai quali ogni categoria d'argomento è applicabile, 
+        ad esempio Administrative units (I.4) e Statistical
+        units (III.1) sono temi INSPIRE per i quali la
+        categoria d'argomento ”confini” è applicabile. Il valore
+        dell'elemento del metadato ISO 19115/ISO 19119 è il valore
+        che appare nella colonna “name” della tabella B.5.27 dell'
+        ISO 19115.
+    </div></alert.M39>
+    <report.M39><div>La categoria d'argomento ISO è:</div></report.M39>
+    <alert.M40><div><h2>Il tema INSPIRE è obbligatorio</h2></div></alert.M40>
+    <report.M40><div> Tema/i INSPIRE trovato/i.</div></report.M40>
+    <alert.M41><div><h2>INSPIRE - Il bounding box geografico è obbligatorio</h2><br/>
+        <ul>
+            <li>
+                Obbligatorio per dataset spaziali e serie.
+            </li>
+            <li>
+                Condizionale per servizi spaziali: Obbligatorio per servizi con
+                una estensione esplicita
+            </li>
+        </ul>
+        
+        <b>Istruzioni di implementazione:</b>
+        <ul>
+            <li>
+                Ci sono tante bounding box che definiscono la località 
+		geografica della risorsa quante sono le istanze di
+		identificationInfo[1]/*/extent/*/geographicElement che possiedono
+		le proprietà westBoundLongitude, eastBoundLongitude,
+                southBoundLatitude and northBoundLatitude. Le quattro 
+		coordinate del bounding box sono create dalla medesima istanza.
+            </li>
+            <li>
+                Il bounding box deve essere il più piccolo possibile. 
+            </li>
+            <li>
+                Se il bounding box attraversa il meridiano 180, il valore 
+                di westBoundLongitude sarà più grande del valore di
+                eastBoundLongitude.
+            </li>
+            <li>
+                Le coordinate del bounding box sono espresse in un qualsiasi
+                sistema di riferimento di coordinate geografiche con un Greenwich
+                Prime Meridian (Vedi SC13 in 1.2).   
+            </li>
+        </ul>      
+        
+    </div></alert.M41>
+    <alert.M41.N><div>NorthBoundLongitude mancante o errato</div></alert.M41.N>
+    <alert.M41.S><div>SouthBoundLongitude mancante o errato</div></alert.M41.S>
+    <alert.M41.E><div>EastBoundLongitude mancante o errato</div></alert.M41.E>
+    <alert.M41.W><div>WestBoundLongitude mancante o errato</div></alert.M41.W>
+    <report.M41.N><div>NorthBoundLongitude trovato:</div></report.M41.N>
+    <report.M41.S><div>SouthBoundLongitude trovato:</div></report.M41.S>
+    <report.M41.E><div>EastBoundLongitude trovato:</div></report.M41.E>
+    <report.M41.W><div>WestBoundLongitude trovato:</div></report.M41.W>
+    
+    <alert.M42><div><h2>INSPIRE - Il riferimento temporale è obbligatorio</h2>
+        Non è stata trovata alcuna istanza di riferimento temporale.
+        <b>Istruzioni di implementazione:</b>
+        Ogni istanza di estensione temporale può essere un intervallo
+        di date o una singola data. Il periodo temporale complessivo
+        coperto dal contenuto della risorsa può essere
+        composto da una o più istanze.<br/>
+        Oppure una data di riferimento della risorsa citata (pubblicazione, ultima revisione o creazione).
+        <br/>
+        <b>Esempio:</b>
+         Da 1977-03-10T11:45:30 a 2005-01-15T09:10:00
+    </div></alert.M42>
+    <alert.M42.creation><div>Non devono esserci istanze multiple di 
+        MD_Metadata.identificationInfo[1].MD_Identification.citation.CI_Citation.date 
+        dichiarate come data di creazione (ossia CI_Date.dateType contenente il valore di creazione)</div></alert.M42.creation>
+    <report.M42.begin><div>Estensione temporale (inizio) trovato: </div></report.M42.begin>
+    <report.M42.end><div>Estensione temporale (fine) trovata: </div></report.M42.end>
+    <report.M42.publication><div>Data di pubblicazione della risorsa trovata:</div></report.M42.publication>
+    <report.M42.creation><div>Data di creazione della risorsa trovata::</div></report.M42.creation>
+    <report.M42.revision><div>Data di revisione della risorsa trovata::</div></report.M42.revision>
+    
+    
+    <alert.M43><div><h2>INSPIRE - L'origine è obbligatorio</h2><br/>
+        <ul>
+            <li>Obbligatorio per dataset spaziali e serie spaziali.</li>
+            <li>Non applicabile ai servizi.</li>
+        </ul>
+        In aggiunta alla spiegazione generale riguardo alla genealogia del dataset 
+        è possibile inserire informazioni sulla qualità del dato qui.<br/>
+        Un singolo metadato ISO 19115 può comprendere più di un gruppo di istruzioni 
+        sulla qualità della informazione, ognuno dei quali con nessuna o una dichiarazione sulla genealogia. 
+        Ci dovrebbero essere uno e soltanto un gruppo di informazioni sulla qualità
+        legata alla risorsa nella sua totalità, ed avente una dichiarazione sulla genealogia (Vedi
+        SC6 in 1.2).<br/>
+        <b>Esempio:</b>    Il dataset è stato digitalizzato dalla mappa in standard 1:5.000 
+        
+    </div></alert.M43>
+    <report.M43><div><h2>La genealogia è impostata.</h2></div></report.M43>
+    
+    
+    <alert.M44><div><h2>INSPIRE - La conformità è obbligatorio (in DQ_DomainConsistency.result.DQ_ConformanceResult)</h2><br/>
+        <b>Istruzioni di implementazione:</b> <br/>
+        I primi due gradi di conformità definiti in Part D 5 del documento
+        di Regole di implementazione INSPIRE per i for metadati sono mappati
+        su due valori del dominio Booleano di ISO 19115. L'ultimo valore 
+        corrisponde al caso in cui nessuna dichiarazione di conformità 
+        è presente nel metadato per la relazione specificata.<br/>        
+        <b>Esempio:</b> titolo “Regole di implementazione INSPIRE riguardo a
+        aggiustamento tecnici per l'interoperabilità e l'armonizzazione 
+        di confini amministrativi”.
+                
+    </div></alert.M44>
+    <report.M44.nonev><div>Il grado di conformità della risorsa non è stato ancora valutato.</div></report.M44.nonev>
+    <report.M44.degree><div>Grado di conformità found:</div></report.M44.degree>
+    <report.M44.spec><div>Specifica:</div></report.M44.spec>
+    
+    <alert.M45.rc><div><h2>Dovrebbe esserci almeno una istanza di 
+        MD_Metadata.identificationInfo[1].MD_Identification.resourceConstraints</h2></div></alert.M45.rc>
+    <report.M45.ac><div>Limitazione all'accesso pubblico (accessConstraints) trovato:</div></report.M45.ac>
+    <report.M45.class><div>Limitazione all'accesso pubblico (classification) trovato:</div></report.M45.class>
+    <alert.M45.or><div>Il valore di 'accessConstraints' deve essere 'otherRestrictions', 
+    	se ci sono istanze di 'otherConstraints' che esprimono limitazioni al pubblico accesso. 
+    	Controlla la lista delle limitazioni al pubblico accesso e il campo altre limitazioni.</div></alert.M45.or>    
+    <report.M45.or><div>Limitazione all'accesso pubblico (otherConstraints) trovato:</div></report.M45.or>
+    <alert.M45.us><div>Condizioni applicate all'accesso e all'uso mancanti</div></alert.M45.us>
+    <report.M45.us><div>Condizioni applicate all'accesso e all'uso trovate:</div></report.M45.us>
+
+
+    <alert.M45><div><h2>INSPIRE - Condizioni per l'accesso e l'uso è obbligatorio</h2><br/>
+    </div></alert.M45>
+    <alert.M46><div><h2>INSPIRE - Limitazioni all'accesso pubblico è obbligatorio</h2></div></alert.M46>
+    
+    
+    
+    <alert.M47><div><h2>INSPIRE - Organizzazione responsabile delle risorse è obbligatorio</h2><br/>
+        Relativa all'organizzazione responsabile, ma potrebbero esserci
+        più responsabili per una singola risorsa. Il nome e l'email dell'organizzazione sono richiesti.
+        <br/>
+        Vedi la sezione identificazione / punto di contatto.
+    </div></alert.M47>
+    <report.M47><div>Organizzazione responsabile delle risorse trovato.</div></report.M47>
+    <alert.M47.info><div>Nome dell'organizzazione ed email non trovati.</div></alert.M47.info>
+    <report.M47.info><div>Nome dell'organizzazione ed email trovati per :</div></report.M47.info>
+    
+    <alert.M48><div><h2>INSPIRE - Punto di contatto dei metadati è obbligatorio</h2><br/>
+        <b>Istruzioni di implementazione:</b><br/>
+        Il ruolo della parte responsabile considerata come punto di contatto 
+        dei metadati ricade al di fuori dell'ambito delle Regole di Implementazione
+        INSPIRE, ma è demandato a ISO 19115. 
+        Il suo valore di default può essere considerato Punto di contatto.<br/>
+        Vedi la sezione metadati.
+    </div></alert.M48>
+    <alert.M48.role><div>Ruolo del contatto è vuoto.</div></alert.M48.role>
+    <report.M48><div>Punto di contatto dei metadadi trovato.</div></report.M48>
+    <alert.M48.info><div>Nome dell'organizzazione ed email non trovati.</div></alert.M48.info>
+    <report.M48.info><div>Nome dell'organizzazione ed email trovati per :</div></report.M48.info>
+    
+    <alert.M49><div><h2>INSPIRE - Lingua dei metadati è obbligatorio</h2><br/>
+        La proprietà lingua non è necessaria per ISO 19115, ma
+        è necessaria per la conformità alle Regole di Implementazione 
+        INSPIRE.        
+    </div></alert.M49>
+    <report.M49><div>Lingua dei metadati è :</div></report.M49>
+    
+    <alert.M50><div><h2>Data dei metadati è mancante</h2></div></alert.M50>
+    <report.M50><div><h2>Data dei metadati è :</h2></div></report.M50>
+    
+    
+    <alert.M51><div><h2>INSPIRE (servizio) - Risorsa collegata è obbligatorio se il collegamento ai dataset su cui il servizio opera sono disponibili</h2>
+        <br/>
+        <b>Istruzioni di implementazione:</b><br/>
+        Non applicabile a dataset e serie<br/>
+        Condizionale nei servizi: Obbligatorio se il collegamento ai dataset su cui il servizio opera sono disponibili.<br/>
+        
+        <ul>
+            <li>La proprietà dovrebbe essere implementata per riferimento(Vedi
+        SC11 in 1.2) e il valore di riferimento dell''oggetto 
+        MD_DataIdentification è il codice dell'elemento Risorsa accoppiata.</li>
+            <li>Per coerenza, il codice dell'elemento Risorsa accoppiata 
+            dovrebbe anche essere il codice di uno degli
+        	Identificativi Univoci di Risorsa (UUID) della corrispondente 
+        	risorsa accoppiata.</li>
+        </ul>
+    </div></alert.M51>
+    <report.M51><div>Risorse accoppiate trovate :</div></report.M51>
+    <alert.M52><div><h2>INSPIRE - Localizzatore della risorsa è obbligatorio se il collegamento è disponibile</h2><br/>
+        Vedi vista avanzata / sezione distribuzione.
+        <br/>
+        <b>Istruzioni di implementazione:</b><br/>
+            <ul>
+                <li>Specifica un URL valido per la risorsa. Se non è disponibile 
+                un link diretto alla risorsa, fornisci un link al punto di contatto
+                dove sono disponibili maggiori informazioni sulla risorsa.</li>
+                <li>Per un servizio, il Localizzatore della risorsa potrebbe essere 
+                uno dei seguenti:</li>
+                <ul>
+                    <li>Link al documento delle capabilities di servizio</li>
+                    <li>Link al documento WSDL del servizio (SOAP Binding)</li>
+                    <li>Link ad una pagina web con ulteriori istruzioni</li>
+                    <li>Link ad una applicazione client che accede direttamente al servizio</li>
+                </ul>
+            </ul>
+            
+    </div></alert.M52>
+    <report.M52><div>Localizzatore della risorsa trovato:</div></report.M52>
+    <alert.M53><div><h2>INSPIRE - Possono esserci zero od una contizione applicabile all'accesso e uso</h2><br/>
+        Limitazioni all'accesso applicate per assicurare la protezione della privacy
+        o di proprietà intellettuali, ed ogni speciale restrizione o limitazioni 
+        nell'ottenimento della risorsa.<br/>
+        <b>Esempio:</b> intellectualPropertyRights (diritto a riceverne vantaggi finanziari 
+        e controllo della distribuzione di una proprietà non-tangibile che è
+        il risultato di un'opera dell'ingegno e della creatività).
+        <br/>
+        Classificazione:
+        <b>Esempio:</b> riservato (non per la divulgazione pubblica)
+        <br/>
+        Limitazione d'uso:
+        <b>Esempio:</b> da non usare per la navigazione
+        <br/>
+    </div></alert.M53>
+    <alert.M54><div><h2>INSPIRE - Il valore di accessConstraints è otherRestrictions, 
+    	se e solo se ci sono istanze di otherConstraints 
+    	che esprimono limitazioni al pubblico accesso</h2></div></alert.M54>
+    <alert.M55><div><h2>INSPIRE (dataset e serie) - Lingua della risorsa è obbligatorio 
+    	se la risorsa include informazioni testuali</h2><br/>
+        Una istanza della proprietà lingua è necessaria per ISO 19115; 
+        il suo valore di default può essere il valore del metadato
+        <b>Istruzioni di implementazione:</b><br/> 
+        Lingua quando il dataset o la serie non contiene informazioni testuali.
+        <br/>
+        <b>Istruzioni di implementazione:</b><br/>
+        Codelist (Vedi ISO/TS 19139) basato sui codici alpha-3 di ISO 639-2.
+    </div></alert.M55>
+    <report.M55><div>Lingua della risorsa è:</div></report.M55>
+    <alert.M56><div><h2>INSPIRE - Risoluzione spaziale è obbligatorio se una scala equivalente o una distanza di risoluzione possono essere specificati</h2><br/>
+        <b>Istruzioni di implementazione:</b>
+        <ul>
+            <li>
+                Ogni risoluzione spaziare è una scala equivalente OPPURE 
+                una distanza di esempio sul terreno.
+            </li>
+            <li>
+            	Quando sono espresse due scale equivalenti o due distanze di esempio 
+            	sul terreno, la risoluzione spaziale è un intervallo delimitato da questi
+            	due valori.            
+            </li>
+        </ul>
+        <b>Esempio:</b> 5000 (mappa in scala 1:5000)
+    </div></alert.M56>
+    <report.M56><div>Risoluzione spaziale è impostata.</div></report.M56>
+    
+    <alert.M57><div><h2>[ISO19119 per i servizi] - OperationName è obbligatorio</h2></div></alert.M57>
+    
+    <alert.M58><div>Informazioni sulla tassonomia dei servizi mancante (seleziona una o più parole chiave dal thesaurus "inspire-service-taxonomy.rdf")</div></alert.M58>
+    <report.M58><div> Classificazione tassonomia dei servizi definita.</div></report.M58>
+    <alert.M59><div><h2>[ISO19119 per i servizi] - ConnectPoint è obbligatorio</h2></div></alert.M59>
+    <alert.M60><div><h2>[ISO19119 per i servizi] - ServiceType è obbligatorio</h2><br/>
+        Mandatory per i servizi.<br/>
+        Non applicabile a dataset e serie<br/>
+        <b>Esempio:</b> 'consultazione', 'ricerca', 'scaricamento', 'conversione', 'richiesta', 'altri'
+    </div></alert.M60>
+    <report.M60><div>Tipo di servizio :</div></report.M60>
+    <!-- INSPIRE metadata rules translation / END -->
+</strings>
