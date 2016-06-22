@@ -924,6 +924,12 @@
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
+			<code>deceniall</code>
+			<label>Decenalmente</label>
+			<description>Los datos se actualizan cada 10 años</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
 			<code>asNeeded</code>
 			<label>Según necesidad</label>
 			<description>Los datos se actualizan según sea necesario</description>
