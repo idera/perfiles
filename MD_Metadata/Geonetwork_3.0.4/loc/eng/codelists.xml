@@ -1037,6 +1037,12 @@
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
+			<code>decennial</code>
+			<label>Decennial</label>
+			<description>Data is updated every 10 years</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
 			<code>asNeeded</code>
 			<label>As needed</label>
 			<description>Data is updated as deemed necessary</description>
