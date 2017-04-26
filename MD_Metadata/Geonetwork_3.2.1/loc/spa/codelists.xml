@@ -23,7 +23,7 @@
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 	</codelist>
 	<!-- ==================================================== -->
-	<codelist name="gmd:CI_OnLineFunctionCode">
+	<codelist alias="function" name="gmd:CI_OnLineFunctionCode">
 		<entry>
 			<code>download</code>
 			<label>Descarga</label>
@@ -509,8 +509,8 @@
 		<entry>
 			<code>8859part15</code>
 			<label>8859 Parte 15</label>
-			<description>ISO/IEC 8859-15, Information technology - 8-bit single byte coded graphic
-				character sets - Part 15 : Latin alphabet No.9</description>
+			<description>ISO/IEC 8859-15, Tecnologías de la información - conjuntos de caracteres gráficos
+        codificados como un sólo byte de 8 bits - Parte 15: alfabeto latino No. 9</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
