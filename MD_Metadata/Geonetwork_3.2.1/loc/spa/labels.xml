@@ -296,7 +296,7 @@
   <element name="gmd:MD_BrowseGraphic" id="48.0">
     <description>Gráfico que proporciona una ilustración del conjunto de datos (debe incluir una
       leyenda para el gráfico)</description>
-    <label>Buscar Gráfico</label>
+    <label>Buscar Miniatura</label>
   </element>
   <element name="gmd:MD_Constraints" id="67.0">
     <label>Restricciones</label>
@@ -1211,7 +1211,7 @@
     <description>Parámetros Georeferenciados</description>
   </element>
   <element name="gmd:graphicOverview" id="31.0">
-    <label>Muestra gráfica</label>
+    <label>Miniatura</label>
     <description>Proporciona una gráfica que ilustra el recurso (debe incluir una leyenda para el
       gráfico)</description>
   </element>
