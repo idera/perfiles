@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xsl:stylesheet xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                xmlns:iso="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:saxon="http://saxon.sf.net/"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:schold="http://www.ascc.net/xml/schematron"
-                xmlns:iso="http://purl.oclc.org/dsdl/schematron"
-                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                 xmlns:gml="http://www.opengis.net/gml"
                 xmlns:gmd="http://www.isotc211.org/2005/gmd"
                 xmlns:gmx="http://www.isotc211.org/2005/gmx"
@@ -14,8 +12,9 @@
                 xmlns:geonet="http://www.fao.org/geonetwork"
                 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="2.0"><!--Implementers: please note that overriding process-prolog or process-root is 
-    the preferred method for meta-stylesheets to use where possible. -->
+                version="2.0"><!--Implementers: please note that overriding process-prolog or process-root is
+      the preferred method for meta-stylesheets to use where possible.
+    -->
 <xsl:param name="archiveDirParameter"/>
    <xsl:param name="archiveNameParameter"/>
    <xsl:param name="fileNameParameter"/>
@@ -49,13 +48,15 @@
 
 
 <!--MODE: SCHEMATRON-SELECT-FULL-PATH-->
-<!--This mode can be used to generate an ugly though full XPath for locators-->
+<!--This mode can be used to generate an ugly though full XPath for locators
+    -->
 <xsl:template match="*" mode="schematron-select-full-path">
       <xsl:apply-templates select="." mode="schematron-get-full-path"/>
    </xsl:template>
 
    <!--MODE: SCHEMATRON-FULL-PATH-->
-<!--This mode can be used to generate an ugly though full XPath for locators-->
+<!--This mode can be used to generate an ugly though full XPath for locators
+    -->
 <xsl:template match="*" mode="schematron-get-full-path">
       <xsl:apply-templates select="parent::*" mode="schematron-get-full-path"/>
       <xsl:text>/</xsl:text>
@@ -72,7 +73,7 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:variable name="preceding"
-                    select="count(preceding-sibling::*[local-name()=local-name(current())                                   and namespace-uri() = namespace-uri(current())])"/>
+                    select="count(preceding-sibling::*[local-name()=local-name(current())                                      and namespace-uri() = namespace-uri(current())])"/>
       <xsl:text>[</xsl:text>
       <xsl:value-of select="1+ $preceding"/>
       <xsl:text>]</xsl:text>
@@ -81,7 +82,8 @@
       <xsl:apply-templates select="parent::*" mode="schematron-get-full-path"/>
       <xsl:text>/</xsl:text>
       <xsl:choose>
-         <xsl:when test="namespace-uri()=''">@<xsl:value-of select="name()"/>
+         <xsl:when test="namespace-uri()=''">@
+              <xsl:value-of select="name()"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:text>@*[local-name()='</xsl:text>
@@ -106,12 +108,14 @@
          </xsl:if>
       </xsl:for-each>
       <xsl:if test="not(self::*)">
-         <xsl:text/>/@<xsl:value-of select="name(.)"/>
+         <xsl:text/>/@
+        <xsl:value-of select="name(.)"/>
       </xsl:if>
    </xsl:template>
    <!--MODE: SCHEMATRON-FULL-PATH-3-->
-<!--This mode can be used to generate prefixed XPath for humans 
-	(Top-level element has index)-->
+<!--This mode can be used to generate prefixed XPath for humans
+      (Top-level element has index)
+    -->
 <xsl:template match="node() | @*" mode="schematron-get-full-path-3">
       <xsl:for-each select="ancestor-or-self::*">
          <xsl:text>/</xsl:text>
@@ -123,11 +127,12 @@
          </xsl:if>
       </xsl:for-each>
       <xsl:if test="not(self::*)">
-         <xsl:text/>/@<xsl:value-of select="name(.)"/>
+         <xsl:text/>/@
+        <xsl:value-of select="name(.)"/>
       </xsl:if>
    </xsl:template>
 
-   <!--MODE: GENERATE-ID-FROM-PATH -->
+   <!--MODE: GENERATE-ID-FROM-PATH-->
 <xsl:template match="/" mode="generate-id-from-path"/>
    <xsl:template match="text()" mode="generate-id-from-path">
       <xsl:apply-templates select="parent::*" mode="generate-id-from-path"/>
@@ -151,7 +156,7 @@
       <xsl:value-of select="concat('.',name(),'-',1+count(preceding-sibling::*[name()=name(current())]),'-')"/>
    </xsl:template>
 
-   <!--MODE: GENERATE-ID-2 -->
+   <!--MODE: GENERATE-ID-2-->
 <xsl:template match="/" mode="generate-id-2">U</xsl:template>
    <xsl:template match="*" mode="generate-id-2" priority="2">
       <xsl:text>U</xsl:text>
@@ -179,10 +184,13 @@
                               title="INSPIRE Strict Validation rules"
                               schemaVersion="">
          <xsl:comment>
-            <xsl:value-of select="$archiveDirParameter"/>   
-		 <xsl:value-of select="$archiveNameParameter"/>  
-		 <xsl:value-of select="$fileNameParameter"/>  
-		 <xsl:value-of select="$fileDirParameter"/>
+            <xsl:value-of select="$archiveDirParameter"/>
+         
+        <xsl:value-of select="$archiveNameParameter"/>
+         
+        <xsl:value-of select="$fileNameParameter"/>
+         
+        <xsl:value-of select="$fileDirParameter"/>
          </xsl:comment>
          <svrl:ns-prefix-in-attribute-values uri="http://www.opengis.net/gml" prefix="gml"/>
          <svrl:ns-prefix-in-attribute-values uri="http://www.isotc211.org/2005/gmd" prefix="gmd"/>
@@ -208,12 +216,14 @@
    <!--SCHEMATRON PATTERNS-->
 <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">INSPIRE Strict Validation rules</svrl:text>
 
-   <!--PATTERN $loc/strings/conformity-->
+   <!--PATTERN
+        $loc/strings/conformity-->
 <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">
       <xsl:copy-of select="$loc/strings/conformity"/>
    </svrl:text>
 
-	  <!--RULE -->
+  <!--RULE
+      -->
 <xsl:template match="//gmd:dataQualityInfo/*/gmd:report/*/gmd:result" priority="1000"
                  mode="M9">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
@@ -271,7 +281,8 @@
                     select="$isNlMetadata and $specification_title[lower-case(normalize-space(.)) = $allTitles//dut/text()]"/>
       <xsl:variable name="correctTitle" select="$allTitles//*[name() = $lang]/text()"/>
 
-		    <!--ASSERT -->
+      <!--ASSERT
+      -->
 <xsl:choose>
          <xsl:when test="$hasDeTitle or $hasEnTitle or $hasFrTitle or $hasItTitle or                               $hasEsTitle or $hasFiTitle or $hasNlTitle"/>
          <xsl:otherwise>
@@ -302,7 +313,8 @@
          </xsl:otherwise>
       </xsl:choose>
 
-		    <!--ASSERT -->
+      <!--ASSERT
+      -->
 <xsl:choose>
          <xsl:when test="$has_specification_title"/>
          <xsl:otherwise>
@@ -320,7 +332,8 @@
          </xsl:otherwise>
       </xsl:choose>
 
-		    <!--ASSERT -->
+      <!--ASSERT
+      -->
 <xsl:choose>
          <xsl:when test="$specification_date and $specification_dateType"/>
          <xsl:otherwise>
@@ -338,7 +351,8 @@
          </xsl:otherwise>
       </xsl:choose>
 
-		    <!--REPORT -->
+      <!--REPORT
+      -->
 <xsl:if test="$has_specification_title">
          <svrl:successful-report xmlns:svrl="http://purl.oclc.org/dsdl/svrl" ref="#_{geonet:element/@ref}"
                                  test="$has_specification_title">
@@ -360,7 +374,8 @@
          </svrl:successful-report>
       </xsl:if>
 
-		    <!--REPORT -->
+      <!--REPORT
+      -->
 <xsl:if test="$degree">
          <svrl:successful-report xmlns:svrl="http://purl.oclc.org/dsdl/svrl" ref="#_{geonet:element/@ref}"
                                  test="$degree">
