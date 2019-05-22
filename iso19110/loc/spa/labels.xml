@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
+  ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
+  ~ and United Nations Environment Programme (UNEP)
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or (at
+  ~ your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but
+  ~ WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  ~ General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+  ~
+  ~ Contact: Jeroen Ticheler - FAO - Viale delle Terme di Caracalla 2,
+  ~ Rome - Italy. email: geonetwork@osgeo.org
+  -->
+<labels
+    xmlns:gfc="http://www.isotc211.org/2005/gfc"
+    xmlns:gmx="http://www.isotc211.org/2005/gmx"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd">
+    <element name="gfc:FC_FeatureCatalogue">
+        <label>Descripcion de la Catacteristica del Catalogo</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_FeatureAttribute">
+        <label>Atributo</label>
+    </element>
+    <element name="gfc:name">
+        <label>Nombre</label>
+        <description> Nombre de la caracteristica del Catalogo</description>
+    </element>
+    <element name="gfc:scope">
+        <label>Aplicacion</label>
+        <description> Definicion de la aplicacion</description>
+    </element>
+    <element name="gfc:versionNumber">
+        <label>Version</label>
+        <description> Version del Catalogo</description>
+    </element>
+    <element name="gfc:versionDate">
+        <label>Fecha</label>
+        <description>Fecha del Catalogo</description>
+    </element>
+    <element name="gfc:producer">
+        <label>Productor del Catalogo</label>
+        <description>Responsable del Catalogo</description>
+    </element>
+    <element name="gfc:featureType">
+        <label>Descripcion de la Propiedad</label>
+        <description>Descripcion de la Propiedad</description>
+    </element>
+    <element name="gfc:isAbstract">
+        <label>Resumen</label>
+        <description>Es un resumen del elemento?</description>
+    </element>
+    <element name="gfc:FC_FeatureType">
+        <label>Descripcion de la tabla de Atributos</label>
+        <description>Descripcion de la tabla de Atributo</description>
+    </element>
+    <element name="gfc:typeName">
+        <label>Propiedad del Nombre</label>
+        <description></description>
+    </element>
+    <element name="gfc:carrierOfCharacteristics">
+        <label>Elementos</label>
+        <description>Asociacion, atributo, operacion, ...</description>
+    </element>
+    <element name="gfc:definition">
+        <label>Definicion</label>
+        <description>Definicion de la propiedad</description>
+    </element>
+    <element name="gfc:fieldOfApplication">
+        <label>Campo de aplicacion</label>
+        <description>Campo de aplicacion</description>
+    </element>
+    <element name="gmd:responsibleParty">
+        <label>Parte responsable</label>
+        <description>Parte responsable</description>
+    </element>
+    <element name="gmd:CI_ResponsibleParty">
+        <label>Parte responsable</label>
+        <description>Parte responsable</description>
+    </element>
+    <element name="gco:lower">
+        <label>Cardinalidad Inferior</label>
+        <description>Cardinalidad Inferior</description>
+    </element>
+    <element name="gco:upper">
+        <label>Cardinalidad Superior</label>
+        <description>Cardinalidad Superior</description>
+    </element>
+    <element name="gfc:cardinality">
+        <label>Cardinalidad</label>
+        <description>Cardinalidad</description>
+    </element>
+    <element name="gfc:label">
+        <label>Etiqueta</label>
+        <description/>
+    </element>
+    <element name="gfc:listedValue">
+        <label>Lista de Codigo</label>
+        <description>Lista de valores para este elemento.</description>
+    </element>
+    <element name="gfc:constrainedBy">
+        <label>Restringido por</label>
+        <description></description>
+    </element>
+    <element name="gfc:definitionReference">
+        <label>Referencia de </label>
+        <description></description>
+    </element>
+    <element name="gfc:code">
+        <label>Codigo</label>
+        <description></description>
+    </element>
+    <element name="gfc:isOrdered">
+        <label>esta ordenado</label>
+        <description></description>
+    </element>
+    <element name="gfc:isNavigable">
+        <label>Es navegable</label>
+        <description></description>
+    </element>
+    <element name="gfc:roleType">
+        <label>Tipo de Rol</label>
+        <description></description>
+    </element>
+    <element name="gfc:inheritsFrom">
+        <label>Hereda de</label>
+        <description></description>
+    </element>
+    <element name="gfc:inheritsTo">
+        <label>Hereda a</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_InheritanceRelation">
+        <label>Relacion de Herencia</label>
+        <description></description>
+    </element>
+    <element name="gfc:functionalLanguage">
+        <label>Lenguaje Funcional</label>
+        <description></description>
+    </element>
+    <element name="gfc:definitionSource">
+        <label>Fuente de definicion</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_FeatureOperation">
+        <label>Caracteristica de la Operacion</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_FeatureAssociation">
+        <label>Asocacion de la caracteristica</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_AssociationRole">
+        <label>Rol de Asociacion</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_RoleType">
+        <label>Tipo de Rol</label>
+        <description></description>
+    </element>
+    <element name="gfc:description">
+        <label>Descripcion</label>
+        <description></description>
+    </element>
+    <element name="gfc:aliases">
+        <label>Alias</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_ListedValue">
+        <label>Lista de Codigo</label>
+        <description></description>
+    </element>
+    <element name="gfc:valueType">
+        <label></label>
+        <description></description>
+    </element>
+    <element name="gfc:memberName">
+        <label>Nombre del Miembro</label>
+        <description></description>
+    </element>
+    <element name="gfc:FC_Constraint">
+        <label>Restriccion</label>
+        <description></description>
+    </element>
+    <element name="gfc:uniqueInstance">
+        <label>Instancia Unica</label>
+        <description></description>
+    </element>
+    <element name="gfc:type">
+        <label>Tipo</label>
+        <description></description>
+    </element>
+    <element name="gfc:relation">
+        <label>Relacion</label>
+        <description></description>
+    </element>
+    <element name="gfc:featureCatalogue">
+        <label>Caracteristica del catalogo</label>
+        <description></description>
+    </element>
+    <element name="gfc:roleName">
+        <label>Nombre de la funcion</label>
+        <description></description>
+    </element>
+    <element name="gfc:signature">
+        <label>Firma</label>
+        <description></description>
+    </element>
+    <element name="gfc:formalDefinition">
+        <label>Definicion formal</label>
+        <description></description>
+    </element>
+    <element name="gfc:triggeredByValueOf">
+        <label>Triggered por valor de</label>
+        <description></description>
+    </element>
+    <element name="gfc:affectsValueOf">
+        <label>Afecta el valor de</label>
+    </element>
+    <element name="gfc:observesValueOf">
+        <label>Observar el valor de</label>
+    </element>
+    <element name="gfc:valueMeasurementUnit">
+        <label>Valor de la unidad de medida</label>
+    </element>
+    <!-- ==================================================== -->
+    <element name="gmx:name">
+        <label>Nombre</label>
+        <description>Nombre de la caracteristica del catalogo</description>
+    </element>
+    <element name="gmx:scope">
+        <label>Alcance</label>
+        <description>Definicion del Alcance</description>
+    </element>
+    <element name="gmx:versionNumber">
+        <label>Version</label>
+        <description>Version del Catalogo</description>
+    </element>
+    <element name="gmx:versionDate">
+        <label>Fecha</label>
+        <description>Fecha del Catalogo</description>
+    </element>
+    <element name="gmx:fieldOfApplication">
+        <label>Campo de Aplicacion</label>
+        <description>Campo de Aplicacion</description>
+    </element>
+</labels>

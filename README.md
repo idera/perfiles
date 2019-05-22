@@ -1,4 +1,11 @@
-Este repositorio cuenta con dos tipos de metadatos
-Ambos basados en la ISO 19139 y 19139-2 que son la implementacion 
-de la ISO 19115 en XML 
-Las Raices son MD_Metadata y MI_Metadata seg鷑 corresponden
+El actual repositorio cuenta con las siguientes implementaciones de estandares:
+
+**ISO19139:** Este estandar se basa en la aplicaci贸n de la ISO 19115-1 en XML
+
+**ISO19139 MI_metadata:** Este estandar se basa en la aplicaci贸n de las ISO 19115-1 y 19115-2 en XML
+
+**ISO19115-3:** Este estandar se basa en la combinaci贸n de las ISO 19115 parte 1 y 2 conjuntamente con la ISO 19139 parte 1 y 2.
+
+**ISO19110:** Este estandar se basa en la aplicaci贸n de un modelo de objeto espacial perteneciente a un catalogo de objetos. 
+
+Todos los directorios cuentan con una carpeta de template que poseen archivos xml que comienzan con el nombre Perfil que aplica a la definici贸n teorica de los perfiles publicados por IDERA. 
